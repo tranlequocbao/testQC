@@ -1,0 +1,84 @@
+body::-webkit-scrollbar-thumb{
+    background-color: #fff;
+    background-image: -webkit-linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 25%, transparent 100%, rgba(0,0,0,1) 75%, transparent);
+}
+body::-webkit-scrollbar{
+    width: 10px;
+    background-color: #f5f5f5;
+}
+body::-webkit-scrollbar-track{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.6);
+    background-color: #CCCCCC;
+}
+.adminControl{
+    background: #f1f1f1;
+    cursor: not-allowed;
+    user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+}
+button:disabled, input:disabled{
+    cursor: not-allowed;
+}
+
+.customCheckbox{
+    position: relative;
+}
+.customCheckbox label{
+    background-color: #ccc;
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: .4s;
+    border-radius: 30px;
+    width: 70px;
+    height: 34px;
+}
+.customCheckbox label:before{
+    content: '';
+    background-color: #fff;
+    bottom: 4px;
+    height: 26px;
+    left: 3px;
+    position: absolute;
+    transition: .4s;
+    width: 26px;
+    border-radius: 50%;
+}
+.customCheckbox input:disabled + label{
+    cursor: not-allowed;
+}
+.customCheckbox input:checked + label{
+    background-color: #66bb6a;
+}
+.customCheckbox input:checked + label:before{
+    transform: translateX(38px);
+}
+table.center th, table.center td{
+    text-align: center;
+    vertical-align: middle;
+}
+
+table.table-scrollbar::-webkit-scrollbar-track{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 10px;
+    background-color: #F5F5F5;
+}
+table.table-scrollbar::-webkit-scrollbar{
+    height: 8px;
+    background-color: #F5F5F5;
+}
+table.table-scrollbar::-webkit-scrollbar-thumb{
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color: #555;
+    cursor: pointer;
+}
+.drag{
+    cursor: grabbing;
+    user-select: none;
+}
